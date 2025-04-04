@@ -1,0 +1,38 @@
+{
+  "name": "payment-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "scripts:transfer": "ts-node src/native-transfer-txv1.ts",
+    "scripts:transfer-deploy": "ts-node src/native-transfer-deploy.ts",
+    "scripts:delegate": "ts-node src/native-auction-delegate-txv1.ts",
+    "scripts:undelegate": "ts-node src/native-auction-undelegate-txv1.ts",
+    "scripts:redelegate": "ts-node src/native-auction-redelegate-txv1.ts",
+    "scripts:stored-delegate": "ts-node src/stored-contract-auction-delegate-txv1.ts",
+    "scripts:install-wasm": "ts-node src/install-wasm.ts",
+    "test": "cucumber-js --require-module ts-node/register --require step-definitions/**/*.ts features/**/*.feature"
+  },
+  "keywords": [],
+  "author": "David Hernando <david.hernando@makes.services>",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@types/cucumber": "^7.0.3",
+    "@types/jest": "^29.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "dotenv": "^16.4.7",
+    "prettier": "^2.7.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@ethersproject/bignumber": "^5.7.0",
+    "casper-js-sdk": "5.0.0",
+    "commander": "^10.0.0",
+    "ts-results": "^3.3.0"
+  }
+}
